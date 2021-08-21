@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <script src="js/jQuery v3.6.0.js"></script>
+</head>
+
+<body>
+    <div id="div0">This is content of div0 to be changed.</div>
+    <div id="div1">This is content of div1 to be changed.</div>
+    <button id="button">Ajax para 1</button>
+    <button id="button2">Ajax para 2</button>
+    <script>
+        $(function() {
+            $("#div0").click(function() {
+                $("#div0").load("ajax/content.txt");
+            });
+            $("#button2").dblclick(function() {
+                $("#div1").load("ajax/content.txt #para2");
+            });
+            $("button").click(function() {
+                $.ajax({
+                    url: "ajax/content.txt",
+                    success: function(data) {
+                        $("#div0").html(data);
+                    }
+                });
+            });
+            $("button").dblclick(function() {
+                $.ajax({
+                    url: "ajax/content.txt"
+                }).done(function() {
+                    $("#div0").html(data);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

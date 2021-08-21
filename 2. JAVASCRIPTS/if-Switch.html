@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-else, Switch</title>
+    <style>
+        #text {
+            background-color: black;
+            color: white;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="text">
+        Enter Season name: <input type="text" id="myinput" placeholder="Enter season name">
+    </div>
+    <button id="if_else" onclick="IfElse()">
+        If-else
+    </button>
+    <button id="switch" onclick="Switch()">
+        Switch
+    </button>
+    <script>
+        function IfElse() {
+            var Season = document.getElementById("myinput").value.toLowerCase();
+            if (Season == "summer") {
+                window.alert("this is summer time!");
+            } else if (Season == "winter") {
+                window.alert("this is winter time!");
+            } else if (Season == "spring") {
+                window.alert("this is spring time!");
+            } else if (Season == "autumn") {
+                window.alert("this is autumn time!");
+            } else {
+                window.alert("this is not recoganized!");
+            }
+        }
+
+        function Switch() {
+            var Season = document.getElementById("myinput").value.toLowerCase();
+            switch (Season) {
+                case "summer":
+                    window.alert("this is summer time!");
+                case "winter":
+                    window.alert("this is winter time!");
+                case "spring":
+                    window.alert("this is spring time!");
+                case "autumn":
+                    window.alert("this is autumn time!");
+                default:
+                    window.alert("this is not recoganized!");
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Styling</title>
+    <script src="js/jQuery v3.6.0.js"></script>
+    <style>
+        #game {
+            background-color: pink;
+            font-size: 4rem;
+            text-align: center;
+            width: 450px;
+            padding: 10px;
+            margin: auto;
+            border-radius: 40px;
+        }
+        
+        #element {
+            position: absolute;
+            top: 300px;
+            left: 280px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            height: 100px;
+            border-radius: 50%;
+            width: 100px;
+            cursor: pointer;
+        }
+        
+        #scoreElement {
+            float: right;
+            text-align: center;
+            background-color: purple;
+            color: white;
+            padding: 30px;
+            width: 90px;
+            border-radius: 30px;
+        }
+        
+        #start {
+            position: fixed;
+            top: 110px;
+            left: 30px;
+            cursor: pointer;
+            background-color: plum;
+            border: none;
+            margin-top: 00px;
+            width: 130px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        
+        #start:hover {
+            color: white;
+            background-color: black;
+        }
+        
+        #time {
+            color: pink;
+            background-color: black;
+            width: 200px;
+            margin: auto;
+            margin-top: 10px;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="game">jQuery Game</p>
+    <div id="scoreElement">Score: <span id="score">0</span></div>
+    <div id="time">
+        Time Remaining: <span id="timeRemaining"> 90 </span> Seconds
+    </div>
+    <button id="start"> Start Game </button>
+    <div id="element">
+        Click Me!
+    </div>
+    <script>
+        var score = 0;
+        var playing = false;
+        var counter;
+        var time = 60;
+
+        $(document).ready(function() {
+
+            $("#start").click(function() {
+                if (playing) {
+                    location.reload();
+                } else {
+                    playing = true;
+                    $("#start").html(" Reset Game ");
+                }
+            });
+
+            $("#element").click(function() {
+                if (playing) {
+                    score++;
+                    $("#element").css({
+                        "left": 200 + 600 * Math.random(),
+                        "top": 150 + 350 * Math.random(),
+                        "background-color": "rgba(" + Math.round(Math.random() * 250) + " , " + Math.round(Math.random() * 250) + "," + Math.round(Math.random() * 250) + ")",
+                    });
+                    $("#score").text("" + score);
+                    console.log(score);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

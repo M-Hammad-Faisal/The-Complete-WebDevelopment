@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+    <style>
+        .text-decoration {
+            background-color: lightgreen;
+            text-decoration: underline;
+        }
+        
+        .text-attributes {
+            text-shadow: 2px 2px 6px black;
+            letter-spacing: 2px;
+            text-indent: 10px;
+        }
+        
+        .text_font {
+            background-color: pink;
+            font-weight: bold;
+            font-size: 1.6rem;
+            font-stretch: 10px;
+        }
+        
+        .text-align {
+            background-color: black;
+            color: white;
+            width: 100px;
+            height: 100px;
+            text-align: justify;
+            text-align: left;
+            text-align: right;
+            text-align: center;
+        }
+        
+        .font-family {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .wrap-word {
+            background-color: black;
+            color: white;
+            height: 150px;
+            width: 100px;
+            word-break: break-all;
+            word-break: keep-all;
+            word-wrap: break-word;
+        }
+        
+        .overflow {
+            height: 50px;
+            width: 500px;
+            background-color: blueviolet;
+            color: white;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .overflow:hover {
+            white-space: normal;
+            overflow: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        <div class="text-decoration">
+            <p>1em = 16px <br> Text decoration may be underline, overline,line-through</p>
+        </div>
+        <div class="text-attributes">
+            <p>Text have attributes like text-shadow, letter-spacing, text-indent.</p>
+        </div>
+        <div class="text_font">
+            <p>Font can be changed as font, font-size, font-weight, font-style</p>
+        </div>
+        <div class="text-align">
+            <p>Text-align has 4 properties. right, left,center, justify.</p>
+        </div>
+        <div class="font-family">
+            <p>font-family can be choosen to set the type of fonts. i.e. sans-serif (without corners), serif (with corners), monospace (same width) etc.</p>
+        </div>
+        <div class="text-effects">
+            <div class="wrap-word">
+                word can be wrapped by two/three methods.like by using word-wrap property, word-break, white-space.
+            </div>
+            <div class="overflow">
+                overflow can be set to hidden, text-overflow to elipsis to show three-dots and overflow to scroll, visible.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

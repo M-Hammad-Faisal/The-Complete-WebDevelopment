@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Objects</title>
+</head>
+
+<body>
+    <p>For objects we define it as: <br> var variablename = { attribute: "value" , attribute: value };</p>
+    <p>prototypes for makin the missed attributes. (inhereitance)</p>
+    <script>
+        var myCar = {
+            model: "Lamborghini",
+            tyres: 4,
+            color: "red"
+        };
+
+        var myNewCar = myCar;
+        window.console.log(myCar);
+
+        delete myCar.tyres;
+        window.console.log(myCar);
+        window.console.log(myNewCar);
+
+        myNewCar.color = "purple";
+        window.console.log(myCar);
+        window.console.log(myNewCar);
+
+        var Bag = new Object();
+        Bag.color = "pink";
+        Bag.zips = 4;
+        Bag.handbag = true;
+        Bag.tyres = 0;
+
+        window.console.log(Bag);
+
+        function man(hands, feet, teeth, hair, nails) {
+            this.hands = hands;
+            this.feet = feet;
+            this.teeth = teeth;
+            this.hair = hair;
+            this.nails = nails;
+        }
+
+        var newMan = new man(2, 2, 32, "unlimited", 20);
+        window.console.log(newMan);
+        man.prototype.legs;
+        var man = new man();
+        window.console.log(man.legs);
+    </script>
+</body>
+
+</html>

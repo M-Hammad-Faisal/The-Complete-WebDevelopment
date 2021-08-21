@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change HTML Content</title>
+    <style>
+        #html {
+            background-color: black;
+            color: white;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="html">
+        <p>This is html div which is going to be changed on button click.
+        </p>
+    </div>
+    <button id="Button1">Change Div Text</button> <button id="Button2">Get the div Back</button>
+    <script>
+        document.getElementById("Button1").onclick = function() {
+            document.getElementById("html").innerHTML = "<p>This is html div which is changed by clicking on Button.</p>";
+        }
+        document.getElementById("Button2").onclick = function() {
+            document.getElementById("html").innerHTML = "<p>This is html div which is going to be changed on button click. </p> ";
+        }
+    </script>
+</body>
+
+</html>

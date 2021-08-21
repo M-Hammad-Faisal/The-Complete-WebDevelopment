@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen and Window</title>
+    <style>
+        #div1 {
+            background-color: orange;
+        }
+        
+        #div2 {
+            background-color: pink;
+        }
+        
+        #div3 {
+            background-color: purple;
+        }
+        
+        #div4 {
+            background-color: grey;
+        }
+        
+        .equal {
+            float: left;
+            margin-left: 5px;
+            text-align: center;
+            line-height: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="equal" id="div1">
+        Muhammad
+    </div>
+    <div class="equal" id="div2">
+        Hammad
+    </div>
+    <div class="equal" id="div3">
+        Faisal
+    </div>
+    <div class="equal" id="div4">
+        Infinite
+    </div>
+    <script>
+        for (i = 1; i < 5; i++) {
+            document.getElementById("div" + i).style.width = window.screen.width / 4 - 18 + "px";
+            document.getElementById("div" + i).style.height = window.screen.height - 20 + "px";
+        }
+    </script>
+
+</body>
+
+</html>

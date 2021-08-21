@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <p>splice = (index, number of items, addition items to be inserted) <br> It removes the index completely.</p>
+    <p>delete = array[index] <br> It didn't remove the index completely it just remove the value from there.</p>
+    <p>sort, reverse do as name suggests.</p>
+    <p>splits = (on basis to split, how many splits)</p>
+    <div id="text"> </div>
+    <script>
+        var array = ["I", "am", "ugly."];
+        showResult(array);
+        delete array[1];
+        showResult(array);
+        array.splice(1, 1)
+        showResult(array);
+        array.splice(1, 0, "was");
+        showResult(array);
+        array.sort();
+        showResult(array);
+        array.reverse();
+        showResult(array);
+
+        var mystring = "this is my string.";
+        array = mystring.split("");
+        showResult(array);
+        array = mystring.split(" ");
+        showResult(array);
+
+        function showResult(value) {
+            document.getElementById("text").innerHTML += "<br>" + value;
+        }
+    </script>
+</body>
+
+</html>

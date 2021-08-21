@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+</head>
+
+<body>
+    <div>
+        <p id="myParagraph">
+            This is While Loop. it's syntax is same as java.
+        </p>
+        <p>Purchase Game Using While Loop</p>
+        <button onclick="startGame()">Start</button>
+        <div id="balance">
+            <p>Current Balance: $1000</p>
+        </div>
+    </div>
+    <script>
+        var array = [1, 2, 3];
+        var i = array.length - 1;
+        while (i >= 0) {
+            document.getElementById("myParagraph").innerHTML += "<br>" + Math.pow(array[i], 2);
+            i--;
+        }
+
+        function startGame() {
+            var balance = 1000;
+            document.getElementById("balance").innerHTML = "<p> Current Balance: $1000 </p>";
+            var itemsBought = 0;
+            while (balance > 0) {
+                var itemPrice = Math.round(Math.random() * 100);
+                if (itemPrice <= balance) {
+                    balance -= itemPrice;
+                    itemsBought += 1;
+                    document.getElementById("balance").innerHTML += "<p> Item Price: $" + itemPrice + ". New Balance: $" + balance + ". </p>";
+                }
+            }
+            document.getElementById("balance").innerHTML += "<p> Item Bought: " + itemsBought + ". </p>";
+        }
+    </script>
+</body>
+
+</html>

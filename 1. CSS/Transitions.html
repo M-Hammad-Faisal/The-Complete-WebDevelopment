@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        .transition {
+            background-color: black;
+            color: white;
+            margin: 200px;
+            width: 200px;
+            height: 20px;
+            text-align: center;
+            transition: width 1s, height 1s, transform 1s, font-size 1s;
+        }
+        
+        .transition:hover {
+            width: 400px;
+            height: 40px;
+            font-size: 2em;
+            transform: scale(2, 2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transition">
+        Muhammad Hammad Faisal
+    </div>
+</body>
+
+</html>

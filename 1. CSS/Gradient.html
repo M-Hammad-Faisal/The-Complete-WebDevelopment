@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, pink, plum, purple);
+            background: -webkit-linear-gradient(45deg, pink, plum, purple);
+            background: -o-linear-gradient(45deg, pink, plum, purple);
+            background: -moz-linear-gradient(45deg, pink, plum, purple);
+            background: linear-gradient(to left, rgba(0, 0, 255, 0.4), rgba(0, 255, 0, 0.4));
+        }
+        
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background: radial-gradient(circle, pink 10%, plum 10%, purple);
+            background: -webkit-radial-gradient(circle, pink 10%, plum 10%, purple);
+            background: -o-radial-gradient(circle, pink 10%, plum 10%, purple);
+            background: -moz-radial-gradient(circle, pink 10%, plum 10%, purple);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Box</h1>
+    <div class="box">
+
+    </div>
+    <h1>Circle</h1>
+    <div class="circle">
+
+    </div>
+</body>
+
+</html>

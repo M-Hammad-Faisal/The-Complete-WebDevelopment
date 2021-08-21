@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .visibility {
+            background-color: black;
+            color: white;
+            width: 100px;
+            height: 110px;
+            visibility: hidden;
+        }
+        
+        .display {
+            background-color: red;
+            color: white;
+            width: 100px;
+            height: 110px;
+            display: none;
+        }
+        
+        .block {
+            background-color: green;
+            color: white;
+            width: 100px;
+            height: 150px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="visibility">
+            <p>Visibility is set to reserve the space of element in flow of webpage.</p>
+        </div>
+        <div class="display">
+            <p>Display is set to none to remove space of element and next takes its place.</p>
+        </div>
+        <div class="block">
+            <p>Display is set to block to make them block elements. they may appear as inline elements.</p>
+        </div>
+    </div>
+</body>
+
+</html>

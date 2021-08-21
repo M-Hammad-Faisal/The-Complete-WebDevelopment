@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        #counter {
+            width: 200px;
+            color: white;
+            padding: 10px;
+            margin-left: 150px;
+            margin-top: 20px;
+            border-radius: 50px;
+        }
+        
+        #counter p {
+            margin-left: 40px;
+        }
+        
+        button {
+            color: white;
+            width: 150px;
+            font-size: 16px;
+            height: 50px;
+            border-radius: 30px;
+            margin: 10px;
+        }
+        
+        .red {
+            background-color: red;
+        }
+        
+        .green {
+            background-color: green;
+        }
+        
+        .blue {
+            background-color: blue;
+        }
+        
+        .black {
+            background-color: black;
+            color: white;
+        }
+        
+        button:hover {
+            background-color: orange;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="black" style="float:right;" onclick="clearTimeout(MessageTimeOut)">Avoid Alert</button>
+    <p style="color: white; background-color:black; border-radius:50px; padding:20px; width:180px; margin-left:150px;">Counter {UsingJavaScript}</p>
+    <button class="green" onclick="start()">Start Counter</button>
+    <button class="red" onclick="stop()">Stop Counter</button>
+    <button class="blue" onclick="reset()">Reset Counter</button>
+
+    <div id="counter">
+    </div>
+
+    <script>
+        var count = 0;
+        var myCounter;
+        var running = false;
+
+        var MessageTimeOut = setTimeout(function() {
+            window.alert("This is alert to inform you that we have made counter using JavaScript.");
+        }, 3000);
+
+        function start() {
+            if (running == false) {
+                myCounter = setInterval(function() {
+                    document.getElementById("counter").innerHTML = "<p> Seconds Counter: " + count + "</p>";
+                    document.getElementById("counter").style.backgroundColor = "rgba(" + Math.round(Math.random() * 256) + " , " +
+                        Math.round(Math.random() * 256) + " , " + Math.round(Math.random() * 256) + ")"
+                    count++;
+                }, 1000);
+                running = true;
+            }
+        }
+
+        function stop() {
+            clearInterval(myCounter);
+            running = false;
+        }
+
+        function reset() {
+            count = 0;
+            document.getElementById("counter").innerHTML = "<p> Seconds Counter: " + count + "</p>";
+        }
+    </script>
+</body>
+
+</html>

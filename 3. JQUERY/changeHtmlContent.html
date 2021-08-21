@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Html Content</title>
+
+    <script src="js/jQuery v3.6.0.js"></script>
+</head>
+
+<body>
+    <div id="div">
+        <p id="paragraph">Content of para0.</p>
+    </div>
+    <div id="div0">
+        <p>Content of para1 to be changed.</p>
+    </div>
+    <div id="div1">
+        <p>Content of para2 to be changed.</p>
+    </div>
+    <div id="div2">
+        <input type="text" id="input">
+    </div>
+    <div id="div3">
+        <a href="https:www.google.com/" title="Google" id="Link">Google</a>
+    </div>
+    <button id="changeText">Change Text of Div1</button>
+    <button id="changeHtml">Change Html of Div2</button>
+    <button id="changeInput">Change Input of Input</button>
+    <button id="changeLink">Change Link of Google</button>
+    <button id="changeParagraph">Add paragraph</button>
+    <script>
+        $(function() {
+            $("#changeText").click(function() {
+                $("#div0").text("Content of Changed Para1.");
+            });
+            $("#changeHtml").click(function() {
+                $("#div1").html("<p> Content of Changed Para2. </p>");
+            });
+            $("#changeInput").click(function() {
+                $("#input").val("Changed input value");
+            });
+            $("#changeParagraph").click(function() {
+                $("#div").append("New Paragraph Added at end.");
+                $("#div").prepend("New Paragraph Added at start.");
+                $("#paragraph").before("<p>New Paragraph Added before.</p>");
+                $("#paragraph").after("<p>New Paragraph Added after.</p>");
+            });
+
+            $("#changeLink").click(function() {
+                $("#div3").html("<a id='Link'> Microsoft </a>");
+                $("#Link").attr({
+                    "href": "https://www.microsoft.com",
+                    "title": "Microsoft"
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Effects</title>
+    <script src="js/jQuery v3.6.0.js"></script>
+    <style>
+        #facebook {
+            background-color: black;
+            color: white;
+            height: 50px;
+        }
+        
+        #insta {
+            height: 50px;
+            background-color: pink;
+            color: black;
+        }
+        
+        #twitter {
+            height: 50px;
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="facebook">
+        <p id="p ">This is facebook</p>
+    </div>
+    <div id="insta">
+        <p>This is insta</p>
+    </div>
+    <div id="twitter">
+        <p>This is twitter</p>
+    </div>
+    <button id="fadeout">fade out</button>
+    <button id="fadeIn">fade In</button>
+    <button id="toggleFade">fade toggle</button>
+    <button id="animation">animate</button>
+    <script>
+        $(document).ready(function() {
+
+            $("#fadeIn").click(function() {
+                $("#facebook").fadeIn();
+            });
+            $("#fadeout").click(function() {
+                $("#facebook").fadeOut(3000);
+            });
+            $("#toggleFade").click(function() {
+                $("#facebook").fadeToggle(1000);
+            });
+            $("#animation").click(function() {
+                $("#facebook").animate({
+                    width: 300
+                });
+                $("#facebook").animate({
+                    height: 100
+                });
+                $("#facebook").animate({
+                    width: 150
+                });
+                $("#facebook").animate({
+                    height: 50
+                });
+                $("#facebook").delay(1000).animate({
+                    width: 300
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

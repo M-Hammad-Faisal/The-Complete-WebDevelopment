@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Contents of Div</title>
+    <style>
+        #fb {
+            background-color: darkblue;
+            height: 50px;
+            color: white;
+        }
+        
+        #insta {
+            height: 50px;
+            background-color: orange;
+        }
+        
+        #twitter {
+            height: 50px;
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fb">
+        <p>Facebook</p>
+    </div>
+    <div id="insta">
+        <p>Instagram</p>
+    </div>
+    <div id="twitter">
+        <p>Twitter</p>
+    </div>
+    <button id="Button1" onclick="swap('fb','insta')">Swap Facebook and Instagram</button>
+    <button id="Button2" onclick="swap('insta','twitter')">Swap Instagram and Twitter</button>
+    <button id="Button3" onclick="reset()">Reset</button>
+    <script>
+        function swap(id1, id2) {
+            var x = document.getElementById(id1).innerHTML;
+            var y = document.getElementById(id2).innerHTML;
+            document.getElementById(id1).innerHTML = y;
+            document.getElementById(id2).innerHTML = x;
+        }
+
+        function reset() {
+            document.getElementById("fb").innerHTML = "<p>Facebook</p>";
+            document.getElementById("insta").innerHTML = "<p>Instagram</p>";
+            document.getElementById("twitter").innerHTML = "<p>Twitter</p>";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change HTML Style</title>
+    <style>
+        #html {
+            background-color: black;
+            color: white;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="html">
+        <p>This is html div whose style is going to change.
+        </p>
+    </div>
+    <button id="Button1">Change Div color</button>
+    <button id="Button2">Get the div color Back</button>
+    <script>
+        document.getElementById("Button1").onclick = function() {
+            document.getElementById("html").style.color = 'black';
+            document.getElementById("html").style.backgroundColor = 'white';
+        }
+        document.getElementById("Button2").onclick = function() {
+            document.getElementById("html").style.color = 'white';
+            document.getElementById("html").style.backgroundColor = 'black';
+        }
+    </script>
+</body>
+
+</html>

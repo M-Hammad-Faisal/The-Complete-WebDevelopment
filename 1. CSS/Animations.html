@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        .animation1 {
+            background-color: black;
+            color: white;
+            text-align: center;
+            height: 20px;
+            width: 200px;
+            margin: 100px;
+            -webkit-animation: Animation 3s;
+            animation: Animation 3s;
+        }
+        
+        .animation2 {
+            background-color: black;
+            color: white;
+            text-align: center;
+            height: 20px;
+            width: 200px;
+            margin: 100px;
+            position: relative;
+            -webkit-animation: animation 4s;
+            animation: animation 4s;
+        }
+        
+        @-webkit-keyframes Animation {
+            from {
+                background-color: red;
+                font-size: 1em;
+            }
+            to {
+                height: 60px;
+                width: 600px;
+                background-color: blue;
+                font-size: 3em;
+            }
+        }
+        
+        @keyframes Animation {
+            from {
+                background-color: red;
+                font-size: 1em;
+            }
+            to {
+                height: 60px;
+                width: 600px;
+                background-color: blue;
+                font-size: 3em;
+            }
+        }
+        
+        @-webkit-keyframes animation {
+            0% {
+                left: 0px;
+                top: 0px;
+                width: 200px;
+                height: 20px;
+                background-color: blue;
+            }
+            20% {
+                left: 0px;
+                top: 0px;
+                width: 400px;
+                height: 40px;
+                background-color: blue;
+            }
+            40% {
+                left: 200px;
+                top: 0px;
+            }
+            60% {
+                left: 200px;
+                top: 200px;
+            }
+            80% {
+                left: 0px;
+                top: 200px;
+            }
+            100% {
+                left: 0px;
+                top: 0px;
+                width: 200px;
+                height: 20px;
+            }
+        }
+        
+        @keyframes animation {
+            0% {
+                left: 0px;
+                top: 0px;
+                width: 200px;
+                height: 20px;
+                background-color: blue;
+            }
+            20% {
+                left: 0px;
+                top: 0px;
+                width: 400px;
+                height: 40px;
+                background-color: blue;
+            }
+            40% {
+                left: 200px;
+                top: 0px;
+            }
+            60% {
+                left: 200px;
+                top: 200px;
+            }
+            80% {
+                left: 0px;
+                top: 200px;
+            }
+            100% {
+                left: 0px;
+                top: 0px;
+                width: 200px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animation1">
+        Muhammad Hammad Faisal
+    </div>
+    <div class="animation2">
+        Muhammad Hammad Faisal
+    </div>
+</body>
+
+</html>

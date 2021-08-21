@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        .fixed {
+            height: 100px;
+            width: 110px;
+            background-color: lightblue;
+            position: fixed;
+            top: 100px;
+            left: 140px;
+        }
+        
+        .static {
+            background-color: lightpink;
+            height: 100px;
+            width: 110px;
+            position: static;
+        }
+        
+        .relative {
+            height: 100px;
+            width: 110px;
+            background-color: lightgreen;
+            position: relative;
+            top: 200px;
+            left: 150px;
+        }
+        
+        .absolute {
+            height: 160px;
+            width: 150px;
+            background-color: lightcoral;
+            position: absolute;
+            top: 100px;
+            right: 100px;
+        }
+        
+        .z-index {
+            height: 110px;
+            width: 100px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed">
+        Fixed means it is ignored by rest of the other elements in flow of webpage
+    </div>
+    <div class="static">
+        static means default position of elements in webpage normal flow of webpage
+    </div>
+    <div class="relative">
+        Relative means change in position w.r.t of its original position
+    </div>
+    <div class="absolute">
+        positioning the elements relative to the first parents that is non-static and if there is no such a parent that is non-static then positioning the elements relative to the HTML elements
+    </div>
+    <div class="z-index">
+        z-index: Negative means below and 0 default and Positive means top
+    </div>
+</body>
+
+</html>

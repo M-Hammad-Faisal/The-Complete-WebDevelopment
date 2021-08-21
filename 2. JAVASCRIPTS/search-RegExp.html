@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg Exp and Search</title>
+</head>
+
+<body>
+    <p>Search and RegExp</p>
+    {i means Not case-Sensitive} | {g means global(Case-Sensitive)} <br> {d for digit, a-z for abc, s for space, w for alphaNumeric ,W for Non-AlphaNumberic}
+    <br>{we can also assign d{1,2,3} for searching 1,2,3cin string} <br> {^ means the characters that are not here thann in string}
+    <p> String: <span id="string"></span></p>
+    <p> Pattern: <span id="pattern"></span></p>
+    <p> String.match(Pattern): <span id="match"></span></p>
+    <p> String.search(Pattern): <span id="search"></span></p>
+    <p> Pattern.test(String): <span id="test"></span></p>
+
+    <script>
+        var string = "Alpha-Romeo #1, #2";
+        document.getElementById("string").innerHTML = string;
+        var pattern = /a/i;
+        var pattern = new RegExp("a", "g");
+        var pattern = /d/i;
+        var pattern = /[^pha]/g;
+        var pattern = /\d{1,2}/g;
+        var pattern = /\s/g;
+        var pattern = /\w/g;
+        var pattern = /\W/g;
+
+        document.getElementById("pattern").innerHTML = pattern;
+        document.getElementById("match").innerHTML = string.match(pattern);
+        document.getElementById("search").innerHTML = string.search(pattern);
+        document.getElementById("test").innerHTML = pattern.test(string);
+    </script>
+</body>
+
+</html>

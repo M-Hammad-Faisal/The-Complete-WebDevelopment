@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change CSS using jquery</title>
+    <script src="js/jQuery v3.6.0.js"></script>
+    <style>
+        .div0 {
+            background-color: black;
+            color: white;
+        }
+        
+        .div1 {
+            background-color: pink;
+            color: black;
+        }
+        
+        .div2 {
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div0">
+        <p id="p">This is para0</p>
+    </div>
+    <div class="div1">
+        <p>This is para1</p>
+    </div>
+    <div class="div2">
+        <p>This is para2</p>
+    </div>
+    <button id="changeColor">change Color</button>
+    <button id="removeclass">remove class</button>
+    <button id="addClass">add class</button>
+    <script>
+        $(function() {
+            //$("#changeColor").click(function() {
+            //$("p").css("background-color", "black");
+            // $("p").css("color", "white");
+            //});
+            $("#removeclass").click(function() {
+                $("div").removeClass("div2 div1 div0");
+            });
+            $("#addClass").click(function() {
+                $("p").addClass("div1");
+            });
+        });
+    </script>
+</body>
+
+</html>

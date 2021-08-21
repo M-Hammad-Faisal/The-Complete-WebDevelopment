@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <style>
+        ul#list1 {
+            list-style: circle;
+            list-style: disc;
+            list-style-image: url(img/bluesquare.gif);
+        }
+        
+        ul.innerlist li {
+            list-style: none;
+            background: url(img/bluesquare.gif);
+            padding-left: 10px;
+            background-position: 0px center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unordered Lists</h1>
+    Asian Countries include:
+    <ul id="list1">
+        <!--Unordered List-->
+        <li>Pakistan: <br> cities Includes:
+            <ul class="innerlist">
+                <li>Lahore</li>
+                <li>Karachi</li>
+                <li>Islamabad</li>
+            </ul>
+        </li>
+        <li>India</li>
+        <li>Nepal</li>
+    </ul>
+</body>
+
+</html>
