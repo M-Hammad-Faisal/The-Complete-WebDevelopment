@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DraggableAnd Dropable</title>
+    <style>
+        #div0 {
+            margin-top: 0px;
+            cursor: pointer;
+            float: left;
+            color: white;
+            background-color: blue;
+            height: 100px;
+            padding: 5px;
+            width: 100px;
+        }
+        
+        #div1 {
+            margin-top: 0px;
+            float: right;
+            padding: 5px;
+            color: white;
+            background-color: black;
+            height: 100px;
+            width: 100px;
+        }
+        
+        #droppable {
+            padding: 5px;
+            color: white;
+            background-color: black;
+            text-align: center;
+            height: 500px;
+            width: 500px;
+            margin: auto auto 0px auto;
+            margin-top: 200px;
+        }
+        
+        #div3 {
+            padding: 5px;
+            color: white;
+            background-color: black;
+            text-align: center;
+            height: 100px;
+            width: 100px;
+            margin: 10px auto 0px auto;
+        }
+        
+        #clear {
+            float: clear;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div id="div0" class="ui-corner-all">
+        This can only be dragged in any direction.
+    </div>
+    <div id="div1" class="ui-corner-all">
+        This can only be dragged in y direction.
+    </div>
+    <div id="clear"></div>
+    <div id="droppable" class="ui-corner-all">
+        In this box you can drop blue box.
+    </div>
+    <div id="div3" class="ui-corner-all">
+        You can drop this box.
+    </div>
+    <script>
+        $(function() {
+            $("#div0").draggable({
+                start: function() {
+                    $("#div0").html("This is now being dragged.");
+                    $("#div1").html("why are you dragging?")
+                },
+                drag: function() {
+                    $("#div0").css("background-color", "rgba(" + Math.round(Math.random() * 250) + " , " + Math.round(Math.random() * 250) + "," + Math.round(Math.random() * 250) + ")")
+                    $("#div1").css("background-color", "rgba(" + Math.round(Math.random() * 250) + " , " + Math.round(Math.random() * 250) + "," + Math.round(Math.random() * 250) + ")")
+                    $("#div1").css({
+                        "position": "absolute",
+                        "left": 200 + 600 * Math.random(),
+                        "top": 150 + 350 * Math.random()
+                    });
+                },
+                stop: function() {
+                    $("#div0").html("This can only be dragged in any direction.");
+                    $("#div1").html("This can only be dragged in y direction.");
+                    $("#div0").css({
+                        "color": "white",
+                        "background-color": "blue"
+                    });
+                }
+            });
+            $("#div1").draggable({
+                axis: "y",
+            });
+            $("#div3").draggable({});
+            $("#droppable").droppable({
+                drop: function() {
+                    $(this).css({
+                        "background-color": "pink",
+                        "color": "black"
+                    });
+                },
+                accept: "#div3"
+            });
+        });
+    </script>
+</body>
+
+</html>

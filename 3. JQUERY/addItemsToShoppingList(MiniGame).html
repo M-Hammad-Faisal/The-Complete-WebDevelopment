@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items to Shopping List</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <style>
+        #content {
+            float: left;
+            background-color: grey;
+            color: black;
+            padding: 20px;
+            height: auto;
+            width: 100px;
+            border-radius: 20px;
+        }
+        
+        #shoppingCart {
+            float: right;
+            background-color: grey;
+            color: white;
+            height: auto;
+            padding: 20px;
+            width: 200px;
+            border-radius: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <ul id="list">
+            <li> Eggs</li>
+            <li> Butter </li>
+            <li> Sugar </li>
+            <li> Chicken </li>
+            <li> floar </li>
+        </ul>
+    </div>
+    <div id="shoppingCart">
+        Items can be added here.
+    </div>
+    <script>
+        $(function() {
+            $("#list").find("li").draggable({
+                helper: "clone",
+                AppendTo: "p",
+                start: function() {
+                    $(this).css("color", "white");
+                },
+                stop: function() {
+                    $(this).css("color", "black");
+                }
+            });
+            $("#shoppingCart").droppable({
+                drop: function(event, ui) {
+                    //$(this).find("p").remove(); to replace existing item
+                    $(this).css({
+                        "background-color": "pink",
+                        "color": "black"
+                    });
+                    $("<p></p>").text(ui.draggable.text()).appendTo(this); // getting li value then again placing it in paragraph
+                },
+                accept: "#list li"
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Ui</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <style>
+        .color {
+            background-color: blue;
+            color: white;
+            width: 600px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        #info {
+            cursor: pointer;
+            color: white;
+            background-color: black;
+            padding: 10px;
+        }
+        
+        #info a {
+            background-color: purple;
+            padding: 5px;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+        
+        #info a:active {
+            color: white;
+        }
+        
+        #info a:visited {
+            color: white;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div id="info" class="ui-corner-all">
+        <p>
+            <a href="https://developers.google.com/speed/libraries?hl=en">Click Here</a> to visit JQuery Ui link.</p>
+        <p>To change UI themes, just go to
+            <a href="https://jqueryui.com/themeroller/">Themes</a> andchoose any theme name to change it accordingly.
+        </p>
+        <p class="color ui-corner-all">https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/(smoothness)/jquery-ui.css
+        </p>
+        <p>change this smoothness with the theme name.</p>
+        <p>we can add classes accordingly to our elements.</p>
+    </div>
+    <div id="error" class="ui-state-error ui-corner-all" style="margin-top:10px; text-align:center; padding:5px;">
+        Error not found
+    </div>
+    <script>
+        $(function() {
+            $("#info").draggable();
+        });
+    </script>
+</body>
+
+</html>
