@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Ui</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/sunny/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div id="tabs">
+        <ul>
+            <li>
+                <a href="#Tab1">Tab 1</a>
+            </li>
+            <li>
+                <a href="#Tab2">Tab 2</a>
+            </li>
+            <li>
+                <a href="#Tab3">Tab 3</a>
+            </li>
+            <li>
+                <a href="#Tab4">Tab 4</a>
+            </li>
+        </ul>
+        <div id="Tab1">
+            <p>Content of Tab 1</p>
+        </div>
+        <div id="Tab2">
+            <p>Content of Tab 2</p>
+        </div>
+        <div id="Tab3">
+            <p>Content of Tab 1</p>
+        </div>
+        <div id="Tab4">
+            <p>Content of Tab 1</p>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $("#tabs").tabs({
+                collapsible: true,
+                event: "mouseover"
+            });
+            $("#tabs").tabs().find("ui-tabs-nav").sortable({
+                axis: "x",
+            });
+        });
+    </script>
+</body>
+
+</html>

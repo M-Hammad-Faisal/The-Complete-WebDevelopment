@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectable</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <style>
+        #content {
+            float: left;
+            background-color: purple;
+            color: black;
+            padding: 20px;
+            height: auto;
+            width: 200px;
+            border-radius: 20px;
+        }
+        
+        #shoppingCart {
+            float: right;
+            background-color: grey;
+            color: white;
+            height: auto;
+            padding: 20px;
+            width: auto;
+            border-radius: 30px;
+            text-align: center;
+        }
+        
+        li {
+            font-size: 2em;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        
+        #list .ui-selecting {
+            background: purple;
+            color: white;
+        }
+        
+        #list .ui-selected {
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <ul id="list">
+            <li class="ui-state-default"> Eggs</li>
+            <li class="ui-state-default"> Butter </li>
+            <li class="ui-state-default"> Sugar </li>
+            <li class="ui-state-default"> Chicken </li>
+            <li class="ui-state-default"> floar </li>
+        </ul>
+    </div>
+    <div id="shoppingCart">
+        Items will be added here.
+    </div>
+    <script>
+        $(function() {
+            $("#list").selectable({
+                stop: function() {
+                    $(".ui-selected").each(function() {
+                        $('<p></p>').text($(this).text()).appendTo("#shoppingCart");
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

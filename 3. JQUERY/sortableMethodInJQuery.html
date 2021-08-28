@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <style>
+        #f {
+            background-color: black;
+            font-size: 20px;
+            position: absolute;
+            lefT: 100px;
+            top: 150px;
+            width: 150px;
+            border: 1px solid black;
+        }
+        
+        #fruitH {
+            margin-left: 130px;
+            margin-top: 110px;
+        }
+        
+        #fruits {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            margin-left: -15px;
+            list-style: none;
+            text-align: center;
+            min-height: 20px;
+        }
+        
+        #fruits li {
+            width: 90px;
+            padding: 5px;
+            margin: 2px;
+            border-radius: 5px;
+            background-color: grey;
+        }
+        
+        #vegetableH {
+            margin-left: 310px;
+            margin-top: -47px;
+        }
+        
+        #v {
+            font-size: 20px;
+            position: absolute;
+            lefT: 300px;
+            top: 150px;
+            width: 150px;
+            border: 1px solid black;
+            background-color: black;
+        }
+        
+        #vegetables {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            margin-left: -15px;
+            list-style: none;
+            text-align: center;
+            min-height: 20px;
+        }
+        
+        #vegetables li {
+            width: 90px;
+            padding: 5px;
+            margin: 2px;
+            border-radius: 5px;
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="fruitH">Fruits</h2>
+    <div id="f">
+        <ul id="fruits" class="Gamelist">
+            <li>Potato</li>
+            <li>Apple</li>
+            <li>Pumpkin</li>
+            <li>Banana</li>
+            <li>Cucumber</li>
+            <li>Pine Apple</li>
+        </ul>
+    </div>
+    <h2 id="vegetableH">Vegetables</h2>
+    <div id="v">
+        <ul id="vegetables" class="Gamelist">
+            <li>Carrot</li>
+            <li>Grapes</li>
+            <li>Orange</li>
+            <li>Radish</li>
+            <li>Mango</li>
+            <li>Broccoli</li>
+        </ul>
+    </div>
+    <script>
+        $(function() {
+            $("#fruits, #vegetables").sortable({
+                connectWith: ".Gamelist",
+                placeholder: "ui-state-default",
+                //cancel: "#id" //to cancel the sortable on list item by setting its class nonSortable
+            });
+        });
+    </script>
+</body>
+
+</html>

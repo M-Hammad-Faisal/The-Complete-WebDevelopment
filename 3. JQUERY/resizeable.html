@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizable</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <style>
+        #div {
+            background-color: black;
+            color: white;
+            height: 50px;
+        }
+        
+        #container {
+            height: 50px;
+            background-color: purple;
+            color: white;
+        }
+        
+        #div1 {
+            height: 50px;
+            background-color: pink;
+            color: black;
+        }
+        
+        #div0 {
+            height: 50px;
+            background-color: pink;
+            color: black;
+        }
+        
+        #container {
+            border-style: dotted;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div">Resizeable</div>
+    <div id="container">
+        <div id="div0">We can limit the div to a container.</div>
+    </div>
+    <div id="div1">we can simply animate it, resize other elements with it too.</div>
+    <script>
+        $(function() {
+            $("#div").resizable({
+                minWidth: 200,
+                minHeight: 100,
+                maxWidth: 400,
+                maxHeight: 200,
+                ghost: true,
+                alsoResize: "#div1"
+            });
+            $("#div0").resizable({
+                containment: "#container",
+                animate: true,
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div id="id2">
+        <div id="id1" class="ui-widget-content">
+            <h3>Section 1</h3>
+            <p>This content of Section1</p>
+            <h3>Section 2</h3>
+            <p>This content of Section2</p>
+            <h3>Section 3</h3>
+            <p>This content of Section3</p>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $("#id1").accordion({
+                collapsible: "true",
+                icons: {
+                    header: "ui-icon-circle-arrow-e", //get these name from jquery-ui -- when it is closed
+                    activeHeader: "ui-icon-circle-arrow-s" //when it is opened
+                },
+                //heightStyle: "content", to change its height according to content of divs
+                heightStyle: "fill" //according to resizeable
+            });
+            $("#id2").resizable({
+                resize: function() {
+                    $("#id2").accordion("refresh"); // resize according to resizable
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

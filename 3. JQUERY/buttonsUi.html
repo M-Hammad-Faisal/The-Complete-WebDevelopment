@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <button id="button"> Button </button><br> Button Set
+    <div id="buttons">
+        <button id="button0"> Button 0 </button>
+        <button id="button1"> Button 1 </button>
+        <button id="button2"> Button 2 </button>
+    </div>
+    <br>Check Boxes Set
+    <div id="checkBox">
+        <input type="checkbox" id="checkbox0"><label for="checkbox0">Check 0</label><br>
+        <input type="checkbox" id="checkbox1"><label for="checkbox1">Check 1</label><br>
+        <input type="checkbox" id="checkbox2"><label for="checkbox2">Check 2</label><br>
+    </div>
+    <br> Radio Buttons Set
+    <div id="radioButton">
+        <input type="radio" name="radio" id="radiobutton0"><label for="radiobutton0">Radio 0</label><br>
+        <input type="radio" name="radio" id="radiobutton1"><label for="radiobutton1">Radio 1</label><br>
+        <input type="radio" name="radio" id="radiobutton2"><label for="radiobutton2">Radio 2</label><br>
+    </div>
+
+    <script>
+        $(function() {
+            $("#button").button({
+                icons: {
+                    primary: "ui-icon-folder-open",
+                    secondary: "ui-icon-carret-1-e"
+                },
+                text: false
+            });
+            $("#buttons").buttonset();
+            $("#checkBox").buttonset();
+            $("#radioButton").buttonset()
+        });
+    </script>
+</body>
+
+</html>

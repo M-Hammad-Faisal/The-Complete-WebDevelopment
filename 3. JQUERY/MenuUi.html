@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Ui</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <style>
+        .ui-menu {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <h1>Menu Ui</h1>
+    </div>
+    <div id="pakistan">
+        <h3>Pakistan</h3>
+        <ul id="menu-items" class="ui-menu">
+            <li> Punjab
+                <ul>
+                    <li> Lahore </li>
+                    <li> Karachi </li>
+                    <li> Multan </li>
+                    <li> Vehari </li>
+                </ul>
+            </li>
+            <li> Sindh </li>
+            <li> Balochistan </li>
+            <li> KPK </li>
+        </ul>
+    </div>
+    <script>
+        $(function() {
+            $("#menu-items").menu();
+        });
+    </script>
+</body>
+
+</html>

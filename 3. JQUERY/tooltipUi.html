@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Ui</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/sunny/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <style>
+        p {
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tool Tip</h1>
+    <div id="tooltip">
+        <div id="div1" title="This is tooltip of div1">
+            <p>Content of div 1</p>
+        </div>
+        <div id="div2" title="This is tooltip of div2">
+            <p>Content of div 2</p>
+        </div>
+        <div id="div3" title="This is tooltip of div3">
+            <p>Content of div 3</p>
+        </div>
+        <div id="div4" title="This is tooltip of div4">
+            <p>Content of div 4</p>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            //for every title of element in document
+            $(document).tooltip({
+                show: {
+                    //effect: "explode",
+                    effect: "slideDown",
+                    //effect: "slide",
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

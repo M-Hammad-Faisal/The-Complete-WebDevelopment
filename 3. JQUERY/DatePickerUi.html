@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DatePicker</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div id="date" class="ui-corner-all" style="color:white; padding:20px;background-color: black;">
+        Departure Date:
+        <p><input id="departure"></p>Return Date:
+        <p><input id="return"></p>
+    </div>
+    <script>
+        $(function() {
+            $("#departure").datepicker({
+                showAnim: "slide",
+                changeYear: true,
+                numberOfMonths: 2,
+                dateFormat: "dd MM, yy",
+                minDate: 0,
+                //maxDate: "+12M +10D",
+                //showOn: "button",
+                //buttonImage: "",
+                //buttonImageOnly: true,
+                //buttonText: "Add Image",
+                onClose: function(selectedDate) {
+                    $("#return").datepicker("option", "minDate", selectedDate)
+                },
+                showWeek: true,
+            });
+            $("#return").datepicker({
+                showAnim: "slide",
+                changeYear: true,
+                numberOfMonths: 2,
+                dateFormat: "dd MM, yy",
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Ui</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/sunny/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+    <style>
+        #sliderVal,
+        #rangeSliderVal {
+            color: #A19A8C;
+            border: 0px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slider"></div>
+    <br>
+    <label for="slider">Value:</label> <input type="text" id="sliderVal" readonly>
+    <br>
+    <br>
+    <br>
+    <div id="rangeSlider"></div><br>
+    <label for="rangeSlider">Value:</label><input type="text" id="rangeSliderVal" readonly>
+    <script>
+        $(function() {
+            $("#slider").slider({
+                min: 0,
+                max: 1000,
+                step: 10,
+                slide: function(event, ui) {
+                    $("#sliderVal").val(ui.value);
+                }
+            });
+            $("#sliderVal").val(0);
+            $("#rangeSlider").slider({
+                min: 0,
+                range: true,
+                max: 100000,
+                step: 1000,
+                values: [0, 10000],
+                slide: function(event, ui) {
+                    $("#rangeSliderVal").val(ui.values[0] + " - " + ui.values[1]);
+                }
+            });
+            $("#rangeSliderVal").val($("#rangeSlider").slider("values", 0) + " - " + $("#rangeSlider").slider("values", 1));
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Menu UI</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <style>
+        #select,
+        #select2 {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="selectMenu">
+        <label for="select">Select one option:</label>
+        <select name="select" id="select">
+            <option value="0">Love</option>
+            <option value="1" selected="selected">Rage</option>
+            <option value="3">None</option>
+        </select>
+    </div>
+
+    <br>
+
+    <div id="selectMenu2">
+        <label for="select2">Choose one option:</label>
+        <select name="select2" id="select2">
+            <optgroup label="Choose">
+                <option value="0">Love</option>
+                <option value="1">Rage</option>
+            </optgroup>
+  <optgroup label="No Choice">
+      <option value="3" selected="selected">None</option>
+  </optgroup>
+        </select>
+    </div>
+    <script>
+        $(function() {
+            $("#select").selectmenu();
+            $("#select2").selectmenu();
+        });
+    </script>
+
+</body>
+
+</html>

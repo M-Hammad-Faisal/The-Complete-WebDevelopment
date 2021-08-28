@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Ui</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <h1>Dialog Boxes</h1>
+    <div id="dialog" title="Simple dialogBox">
+        <p>This is Simple Dialog Box.</p>
+    </div>
+    <div id="confirmDialog" class="ui-dialog" title="Confirmation dialogBox">
+        <p> <span class="ui-icon ui-icon-alert" style="float: left;"></span> This is Confirmation Dialog Box.</p>
+    </div>
+
+    <button id="openButton">Open Dialog</button>
+    <button id="confirmButton">Confirm Dialog</button>
+    <script>
+        $(function() {
+            $("#openButton").button();
+            $("#openButton").click(function() {
+                $("#dialog").dialog("open");
+            });
+            $("#confirmButton").button();
+            $("#confirmButton").click(function() {
+                $("#confirmDialog").dialog("open");
+            });
+
+            $("#dialog").dialog({
+                autoOpen: false
+            });
+            $("#confirmDialog").dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    "Go to previus Page": function() {
+                        window.history.back();
+
+                    },
+                    Cancel: function() {
+                        $(this).dialog("close");
+                    }
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
