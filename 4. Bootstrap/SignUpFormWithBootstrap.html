@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>SignUp Form with Bootstrap</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Validations only work with textarea, inputs and select tags -->
+        <form class="g-2 needs-validation" novalidate>
+            <div class="h1 mt-2 mb-2 " style="text-align: center;">SignUp Form</div>
+            <div class="input-group mb-2">
+                <label for="firstname" class="form-label col-md-2">First Name:</label>
+                <div class="col-md-10">
+                    <input type="text" id="firstname" class="form-control" value="Muhammad Hammad" placeholder="First Name" required>
+                </div>
+                <div class="valid-tooltip">Looks Good!</div>
+            </div>
+            <div class="input-group mb-2">
+                <label for="lastname" class="form-label col-md-2">Last Name:</label>
+                <div class="col-md-10">
+                    <input type="text" id="lastname" class="form-control" value="Faisal" placeholder="Last Name" required>
+                </div>
+                <div class="valid-tooltip">Looks Good!</div>
+            </div>
+            <div class="input-group mb-2">
+                <label for="email" class="form-label col-md-2">Email:</label>
+                <div class="col-md-10">
+                    <input type="email" value="someone@example.com" id="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="invalid-tooltip">Please Enter email!</div>
+            </div>
+            <div class="input-group mb-2 ">
+                <label for="username" class="form-label col-md-2">Username:</label>
+                <div class="col-md-10">
+                    <input type="text" id="username" value="Username" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="invalid-tooltip">Please Enter Username!</div>
+            </div>
+            <div class="input-group mb-2">
+                <label for="password" class="form-label col-md-2">Password:</label>
+                <div class="col-md-10">
+                    <input type="password" id="password" value="123" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="invalid-tooltip">Please Enter Password!</div>
+            </div>
+            <div class="input-group mb-2">
+                <label for="confirmpassword" class="form-label col-md-2">Confirm Passsword:</label>
+                <div class="col-md-10">
+                    <input type="password" id="confirmpassword" value="123" class="form-control" placeholder="Confirm Password" required>
+                </div>
+                <div class="invalid-tooltip">Please Confirm Password!</div>
+            </div>
+            <div class="input-group mb-3">
+                <label for="select" class="form-label col-md-2">Choose your Country</label>
+                <div class="col-md-10">
+                    <select id="select" class="form-select">
+                        <option value="choose">Choose an Option</option>
+                        <option value="OptionA" >OptionA</option>
+                        <option value="OptionB" >OptionA</option>
+                        <option value="optionC" >OptionA</option>
+                    </select>
+                </div>
+                <div class="invalid-tooltip">Please Select an option!</div>
+            </div>
+            <div class="input-group mb-3 col-md-6">
+                <label for="desc" class="form-label col-md-2">Description: </label>
+                <textarea name="desc" id="desc" class="form-control" rows="3"></textarea>
+                <div class="invalid-tooltip">Please Write some Description!</div>
+            </div>
+            <div class="form-check mb-3 offset-md-2">
+                <input type="checkbox" name="check" class="form-check-input" id="agreetoterms">
+                <label for="agreetoterms" class="form-label-check"> Agree to All terms and conditions</label>
+                <div class="invalid-tooltip">Please Agree to our terms and condtions!</div>
+            </div>
+            <input type="submit" id="submit" value="LogIn" class="btn btn-outline-dark offset-md-5 col-md-2">
+        </form>
+    </div>
+</body>
+
+</html>
