@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <title>Styling Text with Bootstrap</title>
+</head>
+
+<body>
+    <br>
+    <h1 class="text-center">Friends Table</h1>
+
+    <br>
+    <div class="text-center">
+        <p>Place table in div and give it class table responsive to make it responsive horizontally.</p>
+    </div>
+    <div class="table-responsive-md">
+        <!--{table-resonsive -sm,-md,-lg,-xl,-xxl} -->
+        <table class="table table-striped table-hover table-bordered border-secondary table-condensed">
+            <tr>
+                <th class="table-primary">Roll Number</th>
+                <th class="table-primary">Name</th>
+            </tr>
+            <tr>
+                <td class="table-secondary">2019-CE-11</td>
+                <td class="table-dark">Tajammul Naeem</td>
+            </tr>
+            <tr>
+                <td class="table-danger">2019-CE-13</td>
+                <td class="table-success">Muhammad Hammad Faisal </td>
+            </tr>
+            <tr>
+                <td class="table-info">2019-CE-14</td>
+                <td class="table-dark">Muhammad Nabeel Raza</td>
+            </tr>
+            <tr>
+                <td class="table-warning">2019-CE-34</td>
+                <td class="table-light">Muhammad Usman Tahir</td>
+            </tr>
+        </table>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-md table-hover table-borderless">
+            <caption class="text-center caption-top">Friends Data</caption>
+            <thead>
+                <tr class="table-primary">
+                    <th scope="col"> # </th>
+                    <th scope="col"> Regd. Number </th>
+                    <th scope="col"> Name</th>
+                    <th scope="col"> Friends </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-active">
+                    <th scope="row"> 1 </th>
+                    <td> 2019-CE-11 </td>
+                    <td> Tajammul Naeem </td>
+                    <td> Muhammad Hammad Faisal, Muhammad Nabeel Raza, Tehseen Akhtar, Gull Khan</td>
+                </tr>
+                <tr class="table-light ">
+                    <th scope="row"> 2 </th>
+                    <td> 2019-CE-13 </td>
+                    <td> Muhammad Hammad Faisal</td>
+                    <td> Tajammul Naeem, Muhammad Nabeel Raza, Tehseen Akhtar, Gull Khan</td>
+                </tr>
+                <tr class="table-dark">
+                    <th scope="row"> 3 </th>
+                    <td> 2019-CE-14 </td>
+                    <td> Muhammad Nabeel Raza </td>
+                    <td> Muhammad Hammad Faisal, Tajammul Naeem, Tehseen Akhtar, Gull Khan</td>
+                </tr>
+                <tr class="table-danger">
+                    <th scope="row"> 4 </th>
+                    <td colspan="2" class="text-center"> Tehseen Akhtar </td>
+                    <td> Muhammad Hammad Faisal, Muhammad Nabeel Raza, Tajammul Naeem, Gull Khan</td>
+                </tr>
+                <tr class="table-warning">
+                    <th scope="row"> 5 </th>
+                    <td colspan="2" class="text-center"> Gull Khan </td>
+                    <td> Muhammad Hammad Faisal, Muhammad Nabeel Raza, Tehseen Akhtar, Tajammul Naeem</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="table-secondary">
+                    <th>Foooooooooooooter</th>
+                    <td>Foooooooooooooter</td>
+                    <td>Foooooooooooooter</td>
+                    <td>Foooooooooooooter</td>
+                </tr>
+
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <title>Styling Text with Bootstrap</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h3>Form</h3>
+        <h4>LogIn Form</h4>
+        <form class="form-inline">
+            <div class="form-group mb-3">
+                <label for="email" class="form-label label-control"></label>Email:</label>
+                <input type="email" id="email" class="form-control" title="Email" placeholder="Email">
+                <div id="emailText" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="form-group mb-3">
+                <label for="passsword" class="form-label label-control">Password:</label>
+                <input type="password" id="password" class="form-control" title="Password" placeholder="Passsword">
+            </div>
+            <div class="form-group mb-3 form-check">
+                <input type="checkbox" id="checkbox" class="form-check-input" title="CheckBox">
+                <label for="checkbox" class="form-check-label">CheckBox</label>
+            </div>
+            <div class="form-group mb-3">
+                <input type="submit" value="Login" class="btn btn-primary">
+            </div>
+        </form>
+        <hr>
+        <h4>LogIn Form disabled</h4>
+        <form>
+            <fieldset disabled>
+                <div class="row g-3 mt-1 align-items-center">
+                    <div class="col-auto">
+                        <label for="email" class="col-form-label"> Email ID: </label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="email" id="email2" class="form-control" title="Email" placeholder="Email">
+                    </div>
+                    <div class="col-auto">
+                        <span class=" form-text">We'll never share your email with anyone else.</span>
+                    </div>
+                </div>
+                <div class="row g-3 mt-1 align-items-center">
+                    <div class="col-auto">
+                        <label for="password2" class="col-form-label">Password</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="password" id="password2" class="form-control" placeholder="Password" aria-describedby="passwordHelpInline">
+                    </div>
+                    <div class="col-auto">
+                        <span class="form-text">
+                        Must be 8-20 characters long.
+                    </span>
+                    </div>
+                </div>
+                <div class="row form-group g-3 mt-1">
+                    <div class="col-sm-1">
+                        <label for="select" class="col-form-label">Select: </label>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-2">
+                        <select name="select" class="form-select form-select-lg" id="select">
+                        <option value="select" selected> Select an Option </option>
+                        <option value="value0"> Select 1 </option>
+                        <option value="value1"> Select 2 </option>
+                    </select>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-2">
+                        <select name="select" class="form-select form-select-lg" size="2" d="select2" disabled multiple>
+                        <option value="select" selected> Select an Option </option>
+                        <option value="value0"> Select 1 </option>
+                        <option value="value1"> Select 2 </option>
+                    </select>
+                    </div>
+                    <div class="mb-3 checkbox checkbox-inline">
+                        <label for="checkbox" class="form-check-label"><input type="checkbox" id="checkbox2" class="form-check-input" title="CheckBox"> CheckBox</label>
+                    </div>
+                    <div class="mb-3 checkbox checkbox-inline">
+                        <label for="checkbox" class="form-check-label"><input type="checkbox" id="checkbox4" class="form-check-input" title="CheckBox"> CheckBox</label>
+                    </div>
+                    <div class="mt-1">
+                        <input type="submit" value="Login" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <hr>
+        <br>
+        <h4>more Form elements</h4>
+        <form>
+            <div class="form-group col-sm-6  mb-3">
+                <label for="email" class="form-label">Email Address: </label>
+                <input type="email" name="email" id="email3" class="form-control" placeholder="name@example.com">
+            </div>
+            <div class="form-group col-sm-6 mb-3">
+                <label for="textarea" class="form-label">Comments: </label>
+                <textarea name="textarea" id="textarea" class="form-control" rows="3"></textarea>
+            </div>
+        </form>
+        <br>
+        <hr>
+        <h4>Form in different sizes</h4>
+        <form>
+            <div class="form-group">
+                <input type="email" name="email" id="email4" class="form-control form-control-lg" placeholder="Email" disabled>
+                <input type="email" name="email" id="email5" class="form-control form-control-md" placeholder="Email" disabled readonly>
+                <input type="email" name="email" id="email6" class="form-control form-control-sm" placeholder="Email" disabled>
+            </div>
+        </form>
+        <br>
+        <hr>
+        <h4>Form divided in columns</h4>
+        <div class="form-group">
+            <div class="form-group row g-2">
+                <label for="email" class="col-form-label col-sm-2"> Email </label>
+                <div class="col-sm-10">
+                    <input type="email" id="email7" class="form-control-plaintext" title="Email" placeholder="someone@example.com" readonly>
+                </div>
+            </div>
+            <div class="form-group g-2 row">
+                <label for="email" class="col-form-label col-sm-2"> Password </label>
+                <div class="col-sm-10">
+                    <input type="password" id="password3" class="form-control" title="password" placeholder="Password">
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <h4>Form Login in columns</h4>
+        <div class="form-group row g-3">
+            <div class="form-group col-sm-3">
+                <label for="email" class="visually-hidden"> Email </label>
+                <input type="email" id="email8" class="form-control-plaintext" title="Email" placeholder="someone@example.com" readonly>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="email" class="visually-hidden"> Password </label>
+                <input type="password" id="password4" class="form-control" title="password" placeholder="Password">
+            </div>
+            <div class="form-group col-sm-3">
+                <input type="submit" value="Login" class="btn btn-primary">
+            </div>
+        </div>
+        <br>
+        <hr>
+        <h4>Files input in forms</h4>
+        <div class="form-group">
+            <div class="form-group mb-3">
+                <label for="file" class="visually-hidden"> File </label>
+                <input type="file" id="file" class="form-control" title="File" placeholder="Choose a File">
+            </div>
+            <div class="form-group mb-3">
+                <label for="file" class="visually-hidden"> File </label>
+                <input type="file" id="file2" class="form-control" title="File2" placeholder="Choose multiple Files" multiple>
+            </div>
+            <div class="form-group mb-3">
+                <label for="file" class="visually-hidden"> File </label>
+                <input type="file" id="file3" class="form-control" title="File3" placeholder="Choose a File" disabled>
+            </div>
+            <div class="form-group mb-3">
+                <label for="file" class="visually-hidden"> File </label>
+                <input type="file" id="file4" class="form-control form-control-sm" title="File4" placeholder="Choose a File">
+            </div>
+            <div class="form-group mb-3">
+                <label for="file" class="visually-hidden"> File </label>
+                <input type="file" id="file5" class="form-control form-control-lg" title="File5" placeholder="Choose a File">
+            </div>
+        </div>
+        <br>
+        <hr>
+        <h4>color picker and datalist in forms</h4>
+        <div class="form-group">
+            <label for="color" class="form-label">Color</label>
+            <input type="color" class="form-control form-control-color" name="color" id="color">
+        </div>
+        <div class="form-group">
+            <label for="DataList" class="form-label">DataList</label>
+            <input list="datalist" name="datalist" class="form-control bg-warning" id="datalistinput">
+            <datalist id="datalist">
+                <option value="City0"></option>
+                <option value="City1"></option>
+                <option value="City2"></option>
+                <option value="City3"></option>
+                <option value="City4"></option>
+            </datalist>
+        </div>
+        <br>
+        <hr>
+        <h4>CheckBox and radio in Forms</h4>
+        <div class="form-group form-check">
+            <label for="checkbox3" class="form-check-label  form-check-inline"> CheckBox </label>
+            <input type="checkbox" class="form-check-input" value="" name="checkbox" id="checkbox3" checked disabled>
+        </div>
+        <div class="form-group form-check form-switch">
+            <label for="checkbox3" class="form-check-label  form-check-inline"> CheckBox </label>
+            <input type="checkbox" class="form-check-input" value="" name="checkbox" id="checkbox6" checked disabled>
+        </div>
+        <div class="form-group form-check form-switch">
+            <label for="checkbox3" class="form-check-label  form-check-inline"> CheckBox </label>
+            <input type="checkbox" class="form-check-input" value="" name="checkbox" id="checkbox5" disabled>
+        </div>
+        <div class="form-group form-check form-check-inline">
+            <input type="radio" class="form-radio-input btn-check" value="" name="radio" id="radio" checked>
+            <label for="radio" class="btn btn-primary"> Radio 0 </label>
+        </div>
+        <div class="form-group form-check form-check-inline">
+            <input type="radio" class="form-radio-input btn-check" name="radio" id="radio1">
+            <label for="radio1" class="btn btn-primary"> Radio 1 </label>
+        </div>
+        <div class="form-cehck">
+            <input type="radio" class="btn-check" name="radio1" id="radio2">
+            <label for="radio2" class="btn btn-primary"> Radio 1 </label>
+            <input type="checkbox" class="btn-check" name="checkbox" id="checkbox7">
+            <label class="btn btn-primary" for="checkbox7">Checked</label>
+        </div>
+        <hr><br>
+        <div class="form-check">
+            <label class="btn btn-outline-danger" for="checkbox9">Checked</label>
+            <label class="btn btn-outline-success" for="checkbox8">Checked</label>
+            <input type="checkbox" class="btn-check" id="checkbox8">
+            <input type="checkbox" class="btn-check" id="checkbox9">
+        </div>
+        <hr><br>
+        <h5>Slider Range</h5>
+        <div class="form-range">
+            <input type="range" name="range" min="0" max="5" step="0.5" d="range" class="form-range">
+        </div>
+
+        <br>
+        <hr><br>
+        <h4>Input groups in forms</h4>
+        <div class="input-group mb-3">
+            <span for="text" class="input-group-text">@</span>
+            <input type="text" class="form-control" id="text">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient Email" id="text2">
+            <span for="text" class="input-group-text">.gmail.com</span>
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <input type="text" class="form-control" placeholder="Email username" id="text3">
+            <span for="text" class="input-group-text">@</span>
+            <input type="text" class="form-control" placeholder="Mail ytpe" id="text1">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <input type="button" class=" btn btn-outline-primary " value="button">
+            <input type="text" class="form-control" placeholder="Email username" id="text4">
+            <span class="input-group-text">
+                <input type="checkbox" class="form-check-input" placeholder="kasdkansd" id="checkbox10">
+            </span>
+            <input type="text" class="form-control" placeholder="Email username" id="text5">
+            <button type="button" class="btn btn-outline-secondary">Action</button>
+            <button class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">DropDown</span></button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <hr><br>
+        <h4>floating forms</h4>
+        <div class="form-floating col-sm-4 mb-3">
+            <input type="email" class="form-control" id="text8" placeholder=" Email Address ">
+            <label for="tex8"> Email address </label>
+        </div>
+        <div class="form-floating col-sm-4">
+            <input type="password" class="form-control" id="text9" placeholder=" Password ">
+            <label for="text9"> Password </label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control is-invalid" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Is invalid</label>
+        </div>
+        Floating works the same for other input types. but form select does not support multiple in floating.
+        <div class="form-floating">
+            <select name="select" class="form-select" id="select3" aria-placeholder="Select Option">
+            <option value="select" selected> Select an Option </option>
+            <option value="value0"> Select 1 </option>
+            <option value="value1"> Select 2 </option>
+        </select>
+            <label for="select3">Select option</label>
+        </div>
+        <br>
+        <hr>
+    </div>
+</body>
+
+</html>
