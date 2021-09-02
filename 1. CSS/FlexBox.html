@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexboxes</title>
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: purple;
+            color: white;
+            height: 500px;
+            border-radius: 20px;
+            flex-wrap: wrap;
+            /* CAN BE SET TO flex-wrap:nowrap/wrap/wrap-reverse;*/
+            /*flex-direction: column;
+            */
+            /* CAN BE SET TO flex-direction: column/column-reverse/row-reverse/row;*/
+            /*flex-flow: column wrap-reverse;*/
+            /* CAN BE SET TOFlex wrap cover both flex direction and flex wrap*/
+            /*justify-content: center;
+            */
+            /*CAN BE SET TO justify-content: flex-start/flex-end/center/space-between/space-around/space-evenly*/
+            /*align-items: center;
+            */
+            /*CAN BE SET TO align-items: flex-start/flex-end/center/baseline/stretch*/
+            align-content: space-around;
+            /*CAN BE SET TO align-content: flex-start/flex-end/center/space-around/space-between/stretch | flex-wrap: ONLY WORK FOR WRAP/WRAP-REVERSE*/
+        }
+        
+        .flex-item {
+            background-color: white;
+            color: purple;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 5rem;
+            height: 100px;
+            width: 300px;
+            margin: 10px;
+        }
+        
+        .flex-item-1 {
+            background-color: white;
+            color: purple;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 5rem;
+            height: 100px;
+            width: 400px;
+            margin: 10px;
+        }
+        
+        .item1 {
+            order: 1;
+            flex-grow: 4;
+            flex-shrink: 2;
+            flex-basis: auto;
+            /*flex: 4 4 auto;*/
+            /*flex: flex-grow flex-shink flex-basis;*/
+        }
+        
+        .item2 {
+            order: 2;
+            flex-grow: 4;
+            flex-shrink: 2;
+            flex-basis: auto;
+        }
+        
+        .item3 {
+            order: 3;
+            flex-grow: 4;
+            flex-shrink: 4;
+            flex-basis: auto;
+            align-self: auto;
+            /*CAN BE SET TO align-self: auto/flex-start/flex-end/center/baseline/stretch | flex-wrap: ONLY WORK FOR WRAP/WRAP-REVERSE*/
+        }
+        
+        .item4 {
+            order: 5;
+            flex-grow: 4;
+            flex-shrink: 4;
+            flex-basis: auto;
+        }
+        
+        .item5 {
+            order: 4;
+            flex-grow: 2;
+            flex-shrink: 2;
+            flex-basis: auto;
+        }
+        
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            align-items: center;
+            height: 50px;
+            margin-top: 30px;
+            border-radius: 20px;
+            justify-content: center;
+            background-color: black;
+        }
+        
+        .navbar li a {
+            margin: 30px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .navbar li a:visited {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item item1">1</div>
+        <div class="flex-item item2">2</div>
+        <div class="flex-item-1 item3">3</div>
+        <div class="flex-item item4">4</div>
+        <div class="flex-item-1 item5">5</div>
+    </div>
+    <div class="navbar">
+        <li>
+            <a href="#1">Home</a>
+        </li>
+        <li>
+            <a href="#2">Contact US</a>
+        </li>
+        <li>
+            <a href="#3">About</a>
+        </li>
+    </div>
+</body>
+
+</html>
