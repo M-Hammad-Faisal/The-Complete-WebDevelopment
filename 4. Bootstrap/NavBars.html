@@ -6,11 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nav Bars</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 </head>
 
 <body>
-
+    <div class="container">
+        <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item">
+                <span class="house"></span>
+                <a href="#" tabindex="-4" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Messages</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact US</a>
+            </li>
+        </ul>
+        <hr>
+        <!-- flex-column to align nav vertical -->
+        <nav class="nav nav-pills nav-fill nav-justified">
+            <a href="#" tabindex="-4" class="nav-link active">Home</a>
+            <a href="#" class="nav-link">Messages</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact US</a>
+        </nav>
+        <hr>
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+            <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </nav>
+    </div>
 </body>
 
 </html>
