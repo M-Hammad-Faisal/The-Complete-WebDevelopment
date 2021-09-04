@@ -13,10 +13,9 @@
 
 <body>
 
-    <nav class="navbar navbar-fixed navbar-dark bg-dark navbar-expand-md bg-light">
+    <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-md bg-light">
         <div class="container-fluid">
-            <span class="navbar-brand h1">Demo Navbar
-                </span>
+            <a href="#" class="navbar-brand"><img src="img/python_32px.png" alt="Python Image" class="d-inline-block align-text-top">Python</a>
             <button type="button" class="navbar-toggler" data-bs-target="#navbarcontent" data-bs-toggle="collapse">
                     <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,38 +23,39 @@
                 <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link ">All Products</a>
+                        <a href="#" class="nav-link ">All Libraries</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="dropdown-toggle nav-link" href="#" id="DropDown" data-bs-toggle="dropdown" aria-expanded="false" role="button">Services</a>
-                        <ul class="dropdown-menu" aria-labelledby="DropDown">
-                            <li><a class="dropdown-item" href="#">Service 1</a></li>
-                            <li><a class="dropdown-item" href="#">Another Service</a></li>
+                        <a class="dropdown-toggle nav-link" href="#" id="DropDown" data-bs-toggle="dropdown" aria-expanded="false" role="button">More </a>
+                        <ul class="dropdown-menu dropdown-menu-dark bg-dark" aria-labelledby="DropDown">
+                            <li><a class="dropdown-item" href="#">Documentation</a></li>
                             <li>
-                                <hr class="dropdown-divider">
+                                <a class="dropdown-item" href="#">Articles</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider bg-light">
                             </li>
                             <li><a class="dropdown-item" href="#">About Us</a></li>
                         </ul>
                     </li>
                 </ul>
-                <hr>
-                <form class="navbar-form navbar-center mx-2 gap-2 d-flex">
+                <hr class="bg-light">
+                <form class="navbar-form mx-3">
                     <div class="input-group">
+                        <input type="text" class="form-control" id="search" placeholder="Search Libraries">
                         <span class="input-group-btn">
-                                <button type="submit" class="btn btn-info"> Go </button>
+                                <button type="submit" class="btn btn-info"> Search </button>
                             </span>
-                        <input type="text" class="form-control" id="search" placeholder="Search here">
-                        <i class="input-group-text bi bi-search"></i>
                     </div>
                 </form>
-                <hr>
+                <hr class="bg-light">
                 <form class="navbar-form d-flex justify-content-center">
                     <button class="btn btn-success" type="button" id="Login">LogIn</button>
                 </form>
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top:70px;">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fugiat provident omnis. Eos, suscipit placeat numquam sapiente mollitia, ullam excepturi quae earum perspiciatis quas ut accusamus ipsa perferendis eligendi quibusdam.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fugiat provident omnis. Eos, suscipit placeat numquam sapiente mollitia, ullam excepturi quae earum perspiciatis quas ut accusamus ipsa perferendis eligendi quibusdam.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fugiat provident omnis. Eos, suscipit placeat numquam sapiente mollitia, ullam excepturi quae earum perspiciatis quas ut accusamus ipsa perferendis eligendi quibusdam.</p>
