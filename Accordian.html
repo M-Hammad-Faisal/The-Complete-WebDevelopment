@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Accordion</h2>
+        <div class="accordion" id="accordion-element">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#Accordion-1" aria-expanded="true" aria-controls="#Accordion-1">Accordion-Item 1</button>
+                </h2>
+                <div class="accordion-collapse collapse show" data-bs-parent="#accordion-element" id="Accordion-1">
+                    <div class="accordion-body">
+                        Accordion 1
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Accordion-2">Accordion-Item 2</button>
+                </h2>
+                <div class="accordion-collapse collapse" data-bs-parent="#accordion-element" id="Accordion-2">
+                    <div class="accordion-body">
+                        Accordion 2
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Accordion-3">Accordion-Item 3</button>
+                </h2>
+                <div class="accordion-collapse collapse" data-bs-parent="#accordion-element" id="Accordion-3">
+                    <div class="accordion-body">
+                        Accordion 3
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Accordian Flush</h2>
+        <div class="accordion accordion_flush" id="accordion-element-2">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Accordion-4" aria-expanded="true" aria-controls="#Accordion-4">Accordion-Item 4</button>
+                </h2>
+                <div class="accordion-collapse collapse" data-bs-parent="#accordion-element-2" id="Accordion-4">
+                    <div class="accordion-body">
+                        Add <code>.accordion-flush</code> to remove the default background-color, some borders, and some rounded corners to render accordions edge-to-edge with their parent container.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Accordion-5">Accordion-Item 5</button>
+                </h2>
+                <div class="accordion-collapse collapse" data-bs-parent="#accordion-element-2" id="Accordion-5">
+                    <div class="accordion-body">
+                        Accordion 5
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Accordion-6">Accordion-Item 6</button>
+                </h2>
+                <div class="accordion-collapse collapse" data-bs-parent="#accordion-element-2" id="Accordion-6">
+                    <div class="accordion-body">
+                        Accordion-6
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Always Open</h2>
+        <div class="accordion" id="accordion-element-3">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Accordion-7" aria-expanded="true" aria-controls="#Accordion-7">Accordion-Item 7</button>
+                </h2>
+                <div class="accordion-collapse collapse show" id="Accordion-7">
+                    <div class="accordion-body">
+                        To make it always open we just remove <code>.data-bs-parent</code> from the body.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Accordion-8">Accordion-Item 8</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="Accordion-8">
+                    <div class="accordion-body">
+                        Accordion 8
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Accordion-9">Accordion-Item 9</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="Accordion-9">
+                    <div class="accordion-body">
+                        Accordion 9
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
