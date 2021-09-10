@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolls Py</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <h1>Simple ScrollsPy Using Pills</h1>
+    <nav class="navbar fixed-top navbar-light bg-light" id="navbar-1">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand"><img src="img/python_32px.png" alt="Python Image" class="d-inline-block align-text-top">Python</a>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item">
+                    <a href="#allproducts" class="nav-link ">All Products</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" id="DropDown" data-bs-toggle="dropdown" aria-expanded="false" role="button">Services </a>
+                    <ul class="dropdown-menu" aria-labelledby="DropDown">
+                        <li><a class="dropdown-item" href="#service1">service1</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#service2">service2</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider bg-light">
+                        </li>
+                        <li><a class="dropdown-item" href="#service3">service3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-1" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="margin-top:70px; height:550px; overflow-y:scroll;">
+        <h4 id="home">Home</h4>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <h4 id="allproducts">All Products</h4>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <h4 id="service1">Service1</h4>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <h4 id="service2">Service2</h4>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <h4 id="service3">Service3</h4>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+    </div>
+    <h1>Nested ScrollsPy using Pills</h1>
+    <div class="row ">
+        <div class="col-4">
+            <nav class="navbar navbar-light bg-light flex-column align-items-stretch" id="navbar-2">
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="#item-1">Item 1</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+                        <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+                    </nav>
+                    <a class="nav-link" href="#item-2">Item 2</a>
+                    <a class="nav-link" href="#item-3">Item 3</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+                        <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+                    </nav>
+                </nav>
+            </nav>
+        </div>
+        <div class="col-8">
+            <div data-bs-spy="scroll" data-bs-target="#navbar-2" data-bs-offset="0" tabindex="0" style="height:350px; overflow-y:scroll;">
+                <h4 id="item-1">Item 1</h4>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <h5 id="item-1-1">Item 1-1</h5>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <h5 id="item-1-2">Item 1-2</h5>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <h4 id="item-2">Item 2</h4>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <h4 id="item-3">Item 3</h4>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <h5 id="item-3-1">Item 3-1</h5>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <h5 id="item-3-2">Item 3-2</h5>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+                <p>Text</p>
+            </div>
+        </div>
+    </div>
+    <h1>Simple ScrollsPy Using Tabs</h1>
+    <nav class="navbar fixed-top navbar-light bg-light mt-5" id="navbar-A">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand"><img src="img/python_32px.png" alt="Python Image" class="d-inline-block align-text-top">PythonA</a>
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a href="#homeA" class="nav-link">HomeA</a></li>
+                <li class="nav-item">
+                    <a href="#allproductsA" class="nav-link ">All Products</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" id="DropDownA" data-bs-toggle="dropdown" aria-expanded="false" role="button">ServicesA </a>
+                    <ul class="dropdown-menu" aria-labelledby="DropDownA">
+                        <li><a class="dropdown-item" href="#serviceA">serviceA</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#serviceB">serviceB</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider bg-light">
+                        </li>
+                        <li><a class="dropdown-item" href="#serviceC">serviceC</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-A" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="margin-top:10px; height:550px; overflow-y:scroll;">
+        <h4 id="homeA">HomeA</h4>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <h4 id="allproductsA">All ProductsA</h4>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <h4 id="serviceA">ServiceA</h4>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <h4 id="serviceB">ServiceB</h4>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <h4 id="serviceC">ServiceC</h4>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+    </div>
+</body>
+
+</html>
