@@ -12,9 +12,54 @@
 </head>
 
 <body>
-    <div>
-
+    <div class="alert alert-primary alert-dismissible" role="alert">
+        A simple Primary alert—check it out!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
+    <div class="alert alert-secondary alert-dismissible" role="alert">
+        A simple secondary alert—check it out!
+        <button class="btn btn-close " type="button" data-bs-dismiss="alert"></button>
     </div>
+    <div class="alert alert-success alert-dismissible" role="alert">
+        A simple success alert—check it out!
+        <button class="btn btn-close" type="button" data-bs-dismiss="alert"></button>
+    </div>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        A simple danger alert—check it out!
+        <button class="btn btn-close" type="button" data-bs-dismiss="alert"></button>
+    </div>
+    <div class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+    </div>
+    <div class="alert alert-info" role="alert">
+        A simple info alert—check it out!
+    </div>
+    <div class="alert alert-light" role="alert">
+        A simple light alert—check it out!
+    </div>
+    <div class="alert alert-dark" role="alert">
+        A simple dark alert—check it out!
+    </div>
+
+    <div id="liveAlertPlaceholder"></div>
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+
+    <script>
+        var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        var alertTrigger = document.getElementById('liveAlertBtn')
+
+        function alert(message, type) {
+            var wrapper = document.createElement('div')
+            wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+            alertPlaceholder.append(wrapper)
+        }
+
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', function() {
+                alert('Nice, you triggered this alert message!', 'success')
+            })
+        }
+    </script>
 </body>
 
 </html>
