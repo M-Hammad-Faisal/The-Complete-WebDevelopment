@@ -112,10 +112,10 @@
                     <div class="modal-body">
                         <label for="InputText">Name:</label>
                         <input type="text" class="form-control" id="InputText" placeholder="Name">
-                        <!-- <h5>Popover in a modal</h5>
-                        <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</a>
+                        <h5>Popover in a modal</h5>
+                        <a href="#" role="button" class="btn btn-secondary popover-test" data-bs-html="true" data-bs-placement="right" data-bs-toggle="popover" title="Popover title" data-bs-content="<strong>Popover</strong> body content is set in this attribute.">Press for popover</a>
                         <hr>
-                        <h5>Tooltips in a modal</h5> <a href="#" class="tooltip-test" title="Tooltip">Link</a> and <a href="#" class="tooltip-test" title="Tooltip">link</a> -->
+                        <h5>Tooltips in a modal</h5> <a href="#" data-bs-toggle="tooltip" title="Tooltip">Link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">link</a>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -143,19 +143,22 @@
 
         var modal = document.getElementById('myModal3')
         modal.addEventListener('show.bs.modal', function(event) {
-            // Button that triggered the modal
             var button = event.relatedTarget
                 // Extract info from data-bs-* attributes
             var Name = button.getAttribute('data-bs-main')
-                // If necessary, you could initiate an AJAX request here
-                // and then do the updating in a callback.
-                //
-                // Update the modal's content.
             var modalTitle = modal.querySelector('.modal-title')
             var modalInput = modal.querySelector('.modal-body input')
 
             modalTitle.textContent = Name + ' Modal'
             modalInput.value = Name
+        });
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
         })
     </script>
 </body>
