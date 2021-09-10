@@ -17,11 +17,11 @@
             <h2>Model Simple</h2>
             <button class="btn btn-primary text-center mt-5" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Enter Your Info</button>
         </div>
-        <div class="modal fade modal-md" id="myModal">
+        <div class="modal fade modal-side modal-right modal-md" id="myModal" aria-hidden="true" aria-labelledby="myModelHeader" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">
+                        <h4 class="modal-title" id="myModalHeader">
                             My Modal Header
                         </h4>
                         <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
@@ -49,54 +49,14 @@
             </div>
         </div>
         <div class="text-center">
-            <h2>Nested Simple</h2>
-            <a class="btn btn-primary text-center mt-5" href="#modal0" role="button" data-bs-toggle="modal">Open First</a>
-        </div>
-        <div class="modal fade" id="modal0" role="dialog">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">
-                            My Modal Header
-                        </h4>
-                        <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>This is First modal press next to open first modal</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary" data-bs-target="#modal1" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="modal1" role="dialog">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">
-                            My Modal Header
-                        </h4>
-                        <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>This is Second modal press Back to open first modal</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary" data-bs-target="#modal0" data-bs-toggle="modal">Back to first</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center">
-            <h2>Static and Scrollable Model</h2>
+            <h2>Static and Scrollable Modal</h2>
             <button class="btn btn-primary text-center mt-5" type="button" data-bs-toggle="modal" data-bs-target="#myModal2">Enter Your Info</button>
         </div>
-        <div class="modal fade " data-bs-backdrop="static" data-bs-keyboard="false" id="myModal2">
+        <div class="modal fade modal-fullscreen-lg-down " data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="scrollableModal" tabindex="-1" id="myModal2">
             <div class="modal-dialog  modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">
+                        <h4 class="modal-title" id="scrollableModal">
                             My Modal Header
                         </h4>
                         <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
@@ -140,11 +100,11 @@
             <button class="btn btn-primary text-center mt-5" type="button" data-bs-toggle="modal" data-bs-main="Main" data-bs-target="#myModal3">Enter Main</button>
             <button class="btn btn-primary text-center mt-5" type="button" data-bs-toggle="modal" data-bs-main="Master" data-bs-target="#myModal3">Enter Master</button>
         </div>
-        <div class="modal fade" id="myModal3">
+        <div class="modal fade" id="myModal3" aria-hidden="true" aria-labelledby="centredModal" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">
+                        <h4 class="modal-title" id="centeredModal">
                             Modal
                         </h4>
                         <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
