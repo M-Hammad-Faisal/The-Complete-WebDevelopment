@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Tabs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <h1>Tabs</h1>
+    <ul class="nav nav-tabs justify-content-center" id="tab">
+        <li class="nav-item">
+            <button data-bs-toggle="tab" data-bs-target="#home" class="active nav-link"><span class="bi-house-fill"> </span> Home</button>
+        </li>
+        <li class="nav-item">
+            <button data-bs-toggle="tab" data-bs-target="#messages" class="nav-link"> <span class="bi-envelope-fill"> </span> Messages</button>
+        </li>
+        <li class="nav-item">
+            <button data-bs-toggle="tab" data-bs-target="#about" class="nav-link"><span class="bi-file-person-fill"> </span> About</button>
+        </li>
+        <li class="nav-item">
+            <button data-bs-toggle="tab" data-bs-target="#contactUs" class="nav-link"><span class="bi-telephone-fill"> </span> Contact US</button>
+        </li>
+    </ul>
+    <h1>Pills</h1>
+    <ul class="nav nav-pills justify-content-center" id="pills">
+        <li class="nav-item">
+            <button data-bs-toggle="tab" data-bs-target="#home" class="active nav-link"><span class="bi-house-fill"> </span> Home</button>
+        </li>
+        <li class="nav-item">
+            <button data-bs-toggle="tab" data-bs-target="#messages" class="nav-link"> <span class="bi-envelope-fill"> </span> Messages</button>
+        </li>
+        <li class="nav-item">
+            <button data-bs-toggle="tab" data-bs-target="#about" class="nav-link"><span class="bi-file-person-fill"> </span> About</button>
+        </li>
+        <li class="nav-item">
+            <button data-bs-toggle="tab" data-bs-target="#contactUs" class="nav-link"><span class="bi-telephone-fill"> </span> Contact US</button>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="home" class="text-center fade show active tab-pane">
+            <h3>Home</h3>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+        </div>
+        <div id="messages" class="text-center fade tab-pane">
+            <h3>Messages</h3>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+        </div>
+        <div id="about" class="text-center fade tab-pane">
+            <h3>About</h3>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+        </div>
+        <div id="contactUs" class="text-center fade tab-pane">
+            <h3>Contact Us</h3>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+        </div>
+    </div>
+    <script>
+        var firstTabEl = document.querySelector('#tab li:last-child button') //to open last
+        var firstTab = new bootstrap.Tab(firstTabEl)
+
+        firstTab.show()
+        var tabEl = document.querySelector('button[data-bs-toggle="tab"]')
+        tabEl.addEventListener('shown.bs.tab', function(event) {
+            event.target // newly activated tab
+            event.relatedTarget // previous active tab
+        })
+    </script>
+</body>
+
+</html>
