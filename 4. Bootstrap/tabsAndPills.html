@@ -42,46 +42,67 @@
             <button data-bs-toggle="tab" data-bs-target="#contactUs" class="nav-link"><span class="bi-telephone-fill"> </span> Contact US</button>
         </li>
     </ul>
-    <div class="tab-content">
-        <div id="home" class="text-center fade show active tab-pane">
-            <h3>Home</h3>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
+    <h1>Vertical Tabs and Pills</h1>
+    <div class="text-center">
+        <div class="d-flex align-items-center">
+            <div class="nav flex-column nav-pills me-3" id="v-pills" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#home" type="button" role="tab">Home</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#messages" type="button" role="tab">Messages</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#about" type="button" role="tab">About</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#contactUs" type="button" role="tab">Contact US</button>
+            </div>
+            <div class="nav flex-column nav-tabs me-3" id="v-tabs" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">Home</button>
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab">Messages</button>
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab">About</button>
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#contactUs" type="button" role="tab">Contact US</button>
+            </div>
+            <div class="tab-content">
+                <div id="home" class="text-center fade show active tab-pane">
+                    <h3>Home</h3>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                </div>
+                <div id="messages" class="text-center fade tab-pane">
+                    <h3>Messages</h3>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                </div>
+                <div id="about" class="text-center fade tab-pane">
+                    <h3>About</h3>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                </div>
+                <div id="contactUs" class="text-center fade tab-pane">
+                    <h3>Contact Us</h3>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                    <p>Content</p>
+                </div>
+            </div>
         </div>
-        <div id="messages" class="text-center fade tab-pane">
-            <h3>Messages</h3>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-        </div>
-        <div id="about" class="text-center fade tab-pane">
-            <h3>About</h3>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-        </div>
-        <div id="contactUs" class="text-center fade tab-pane">
-            <h3>Contact Us</h3>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-        </div>
+        <h2>
+            Same Content for all 2 tabs and 2 pill.
+        </h2>
     </div>
+
     <script>
-        var firstTabEl = document.querySelector('#tab li:last-child button') //to open last
+        var firstTabEl = document.querySelector('#tab li:first-child button') //to open last
         var firstTab = new bootstrap.Tab(firstTabEl)
 
         firstTab.show()
