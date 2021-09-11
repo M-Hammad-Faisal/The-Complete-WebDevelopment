@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaspe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <a class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseId">Link V-Collapse</a>
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseId2">V-Collapse with Button</button>
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target=".multiple-collapse">V-Collapse with Button</button>
+        <div class="row">
+            <div id="collapseId" class=" col-4 collapse multiple-collapse">
+                <div class="card card-body mt-2" style="width: 330px;">
+                    <h3>Heading</h3>
+                    <p>Paragraph 1</p>
+                    <p>Paragraph 1</p>
+                    <p>Paragraph 1</p>
+                </div>
+            </div>
+            <div id="collapseId2" class="col-4 collapse multiple-collapse">
+                <div class="card card-body mt-2" style="width: 330px;">
+                    <h3>Heading 2</h3>
+                    <p>Paragraph 1</p>
+                    <p>Paragraph 1</p>
+                    <p>Paragraph 1</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <a class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#horizontalCollapse">Link H-Collapse</a>
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#horizontalCollapse">H-Collapse with Button</button>
+        <div id="horizontalCollapse" class=" mt-2 collapse collapse-horizontal">
+            <div class="card card-body" style="width: 330px;">
+                <h3>Heading</h3>
+                <p>Paragraph 1</p>
+                <p>Paragraph 1</p>
+                <p>Paragraph 1</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
