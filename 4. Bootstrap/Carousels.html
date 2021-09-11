@@ -13,11 +13,12 @@
 
 <body>
     <div class="container-fluid">
-        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-touch="false" data-bs-interval="false" data-bs-ride="carousel">
+        <hr>
+        <div id="Carousel" class="carousel slide carousel-fade" data-bs-touch="false" data-bs-interval="false" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#Carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="1000">
@@ -42,14 +43,30 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#Carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#Carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
+        </div>
+        <hr>
+        <div class="col">
+            <h2 class="text-center">Carousels</h2>
+            <div class="text-center">
+                <a class="btn btn-primary text-center" data-bs-toggle="collapse" data-bs-target="#Collapse">Click for more info</a>
+            </div>
+        </div>
+        <div class="collapse text-center" id="Collapse">
+            <h4>About Carousels attributes</h4>
+            <p>data-bs-target: target on click.</p>
+            <p>data-bs-ride: to make carousel move.</p>
+            <p>data-bs-touch: to disable touch movement.</p>
+            <p>data-bs-slide-to: towards which carousel page.</p>
+            <p>data-bs-slide: if you want them to slide, either left slide/right slide/slide(auto).</p>
+            <p>data-bs-interval: To give specific interval to the carousels if false then they will not change automatically.</p>
         </div>
     </div>
 </body>
